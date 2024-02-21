@@ -53,24 +53,25 @@ A(Inicio)
 B[numero n]
 C{el numero de digitos es par?}
 D[añadir 0 a la izquierda de todo]
-E[encontrar el cuadrado perfecto <= que la primera pareja]
-F[Almacenar base del cuadrado perfecto como digito de raiz]
-G[resta y baja]
+E[encontrar el cuadrado perfecto menor o igual que la primera pareja]
+F[Almacenar base del cuadrado perfecto m como digito de raiz]
+G[restar y concatenar el residuo con el resto de parejas iniciales]
 H[duplicar de la base del cuadrado perfecto m]
-I[plantear mx*x y debe aproximarse al residuo]
+I[concatenar 2m+x y multiplicar por x y debe aproximarse al residuo]
 J[el numero usado en x se almacena como otro digito de la raiz]
+K[concatenar m+x y dar la raiz]
 
 A-->B
 B-->C
 C-->|SI|E
 C-->|NO|D
 D-->E
-E-->G
+F-->G
 E-->F
 G-->H
 H-->I
 I-->J
-
+J-->K
 ```
 ### Pseudocódigo
 ```pseudocode
