@@ -48,6 +48,28 @@ Fin
 ## Procedimiento matemático para hallar raíces cuadradad
 ### Diagrama de flujo 
 ```mermaid
+graph TD
+A(Inicio)
+B[numero n]
+C{el numero de digitos es par?}
+D[añadir 0 a la izquierda de todo]
+E[encontrar el cuadrado perfecto <= que la primera pareja]
+F[Almacenar base del cuadrado perfecto como digito de raiz]
+G[resta y baja]
+H[duplicar de la base del cuadrado perfecto m]
+I[plantear mx*x y debe aproximarse al residuo]
+J[el numero usado en x se almacena como otro digito de la raiz]
+
+A-->B
+B-->C
+C-->|SI|E
+C-->|NO|D
+D-->E
+E-->G
+E-->F
+G-->H
+H-->I
+I-->J
 
 ```
 ### Pseudocódigo
